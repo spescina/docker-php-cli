@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
         git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install -j$(nproc) iconv mcrypt mbstring zip gd
+RUN docker-php-ext-install -j$(nproc) iconv mcrypt mbstring zip gd gettext pdo pdo_mysql pdo_sqlite pdo_pgsql
 
 RUN curl -s http://getcomposer.org/installer | php && \
     echo "export PATH=${PATH}:/var/www/vendor/bin" >> ~/.bashrc && \
