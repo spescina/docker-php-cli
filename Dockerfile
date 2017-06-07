@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y \
         libmcrypt-dev \
         libpng12-dev \
         zlib1g-dev \
+        sqlite3 \
+        libsqlite3-dev \
+        libpq-dev \
         git \
     && rm -rf /var/lib/apt/lists/*
 
