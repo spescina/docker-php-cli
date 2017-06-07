@@ -1,5 +1,8 @@
 FROM php:7.1-cli
 
+RUN groupadd --gid 1000 php \
+  && useradd --uid 1000 --gid php --shell /bin/bash --create-home php
+
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
